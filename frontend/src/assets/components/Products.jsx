@@ -50,9 +50,11 @@ const Products = () => {
       </button>
 
       {products.length > 0 ? (
-        products.map((item) => {
-          return <Product key={item._id} product={item} />;
-        })
+        <div className="allProducts">
+          {products.map((item) => (
+            <Product key={item._id} product={item} />
+          ))}
+        </div>
       ) : (
         <p>No products found.</p>
       )}

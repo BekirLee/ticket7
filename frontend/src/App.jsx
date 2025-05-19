@@ -8,6 +8,8 @@ import Reviews from "./assets/pages/Reviews";
 import Shop from "./assets/pages/Shop";
 import Admin from "./assets/pages/Admin/Admin";
 import ErrorPage from "./assets/pages/ErrorPage";
+import Basket from "./assets/pages/Basket";
+import Details from "./assets/pages/Details";
 
 function App() {
   const router = createBrowserRouter([
@@ -38,6 +40,14 @@ function App() {
         {
           path: "/admin",
           element: <Admin />,
+        },
+        {
+          path: "/details/:id",
+          element: <Details />,
+        },
+        {
+          path: "/basket",
+          element: <Basket />,
         },
         {
           path: "/*",
